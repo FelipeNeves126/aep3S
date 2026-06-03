@@ -52,15 +52,18 @@ button#menu-btn:hover {
 
 nav#menu-mobile {
     position: absolute;
-    top: 120px;
+    top: 100%;
     left: 0;
     width: 100%;
+    border-top: 1px solid #f1f1f1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    
 
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-in-out;
+    z-index: 99;
 }
 
 nav#menu-mobile.aberto{
