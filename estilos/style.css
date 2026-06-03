@@ -76,6 +76,43 @@ nav#menu-mobile ul {
     gap: 20px;
 }
 
+div#perfil-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex: 1;
+    
+}
+
+object.usuar-icon {
+    width: 30px;
+    height: 30px;
+    fill: #e0e0e0; 
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+
+.nomeUsuar {
+    font-size: 14px;
+    font-weight: 700;
+    color: #020202;
+    white-space: nowrap;
+}
+
+.pontosUsuar{
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 800;
+    margin-top: 2px;
+    width: max-content;
+}
 nav a {
     padding: 5px;
     width: fit-content;
