@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nome sistema</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <script src="script/script.js" defer></script>
 </head>
 <body>
     <header id="main-header">
         <div id="nav-container">
             <h1>~Nome do sistema~</h1>
-            <button class="menu-btn">☰</button>
+            <button id="menu-btn" onclick="abrirMenu()">☰</button>
         </div>
+
+        <nav id="menu-mobile">
+            <ul>
+                <li><a href="#">INÍCIO</a></li>
+                <li><a href="#">IMPACTO</a></li>
+                <li><a href="#">FUNCIONAMENTO</a></li>
+                <li><a href="#">CADASTRO</a></li>
+                <li><a href="#">LOGIN</a></li>
+            </ul>
+        </nav>
         <div id="carrossel-parceiros">
             <div id="caminho-carrossel">
                 <object data="imagens/parceiros/spotify-logo.svg" type="image/svg+xml"></object>
@@ -31,5 +42,8 @@
 
         </div>
     </header>
+
+
+    
 </body>
 </html>
