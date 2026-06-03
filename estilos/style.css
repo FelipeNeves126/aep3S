@@ -7,8 +7,8 @@ body {
 }
 
 header#main-header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 10px 20px;
     background-color: #ffffff;
@@ -27,11 +27,11 @@ div#nav-container {
 }
 
 div#nav-container h1{
-    margin: 0px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 4rem;
+    font-size: 2.2rem;
     letter-spacing: -0.5px;
     color: #000000;
+    text-align: center;
 }
 
 button#menu-btn {
@@ -43,6 +43,7 @@ button#menu-btn {
     text-align: left;
     padding: 6px;
     width: max-content;
+    justify-self: start;
 }
 
 button#menu-btn:hover {
@@ -85,7 +86,7 @@ div#perfil-usuario {
     align-items: center;
     justify-content: center;
     gap: 4px;
-    flex: 1;
+    justify-self: end;
     cursor: pointer;
     overflow: hidden;
     padding: 0 5px;
