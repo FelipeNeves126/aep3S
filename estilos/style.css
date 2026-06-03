@@ -83,12 +83,15 @@ div#perfil-usuario {
     justify-content: center;
     gap: 4px;
     flex: 1;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0 5px;
     
 }
 
 object.usuar-icon {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     fill: #e0e0e0; 
     background-color: #f1f1f1;
     border-radius: 50%;
@@ -97,10 +100,15 @@ object.usuar-icon {
 
 
 .nomeUsuar {
-    font-size: 14px;
+
+    font-size: 0.8rem;
     font-weight: 700;
     color: #020202;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    text-align: center;
 }
 
 .pontosUsuar{
@@ -108,7 +116,7 @@ object.usuar-icon {
     color: #2e7d32;
     padding: 2px 8px;
     border-radius: 12px;
-    font-size: 11px;
+    font-size: 0.7rem;
     font-weight: 800;
     margin-top: 2px;
     width: max-content;
