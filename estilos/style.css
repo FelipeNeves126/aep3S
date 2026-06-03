@@ -28,9 +28,10 @@ div#nav-container {
 
 div#nav-container h1{
     margin: 0px;
-    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4rem;
     letter-spacing: -0.5px;
-    color: #333;
+    color: #000000;
 }
 
 button#menu-btn {
@@ -75,6 +76,11 @@ nav#menu-mobile ul {
     gap: 20px;
 }
 
+nav a {
+    padding: 5px;
+    width: fit-content;
+    border-radius: 5px;
+}
 nav#menu-mobile a{
     text-decoration: none;
     color: #333333;
@@ -88,6 +94,13 @@ nav#menu-mobile a{
 nav#menu-mobile a:hover {
     background-color: lightgrey;
     color: black;
+}
+@media (hover: hover) {
+    button#menu-btn:hover {
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+    }
 }
 
 div#carrossel-parceiros {
