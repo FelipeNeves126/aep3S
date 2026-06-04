@@ -42,6 +42,9 @@ button#menu-btn {
     text-align: left;
     padding: 6px;
     width: max-content;
+
+    outline: none; 
+    -webkit-tap-highlight-color: transparent;
 }
 
 button#menu-btn:hover {
@@ -98,6 +101,8 @@ button#btn-avatar {
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s;
+
+    
 }
 
 button#btn-avatar:hover {
