@@ -456,6 +456,130 @@ section#como-funciona-preview {
     width: fit-content;
 }
 
+#modal-tipo-cadastro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#modal-tipo-cadastro.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-box-cadastro {
+    background-color: #ffffff;
+    padding: 32px 24px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 350px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+#modal-tipo-cadastro.ativo .modal-box-cadastro {
+    transform: translateY(0);
+}
+
+.fechar-modal-cadastro {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888888;
+}
+
+.titulo-cadastro {
+    font-size: 1.4rem;
+    color: #111111;
+    margin: 0 0 8px 0;
+    text-align: center;
+}
+
+.subtitulo-cadastro {
+    font-size: 0.95rem;
+    color: #666666;
+    margin: 0 0 24px 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.opcoes-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-opcao {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #eeeeee;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-opcao:hover, .btn-opcao:focus {
+    background-color: #e8f5e9;
+    border-color: #2e7d32;
+}
+
+.opcao-icone {
+    font-size: 24px;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.opcao-texto strong {
+    display: block;
+    font-size: 1.05rem;
+    color: #333333;
+    margin-bottom: 2px;
+}
+
+.opcao-texto span {
+    font-size: 0.8rem;
+    color: #777777;
+}
+
+.link-login-rodape {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+.link-login-rodape a {
+    color: #2e7d32;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
 @keyframes scrollVertical {
     0% {
         transform: translateY(0);

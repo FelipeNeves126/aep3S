@@ -32,7 +32,7 @@
                 <h2>Pequenas ações<br>Impactos gigantes</h2>
                 <p>Conectamos sua generosidade a quem mais precisa. Doe, acumule pontos e acompanhe a diferença que você faz no mundo em tempo real.</p>
                 <div id="botoes-inicio">
-                    <button class="btn-primario">Fazer doação</button'>
+                    <button class="btn-primario" id="btn-iniciar-cadastro">Quero fazer parte</button'>
                     <button class="btn-secundario">Como Funciona</button>
                 </div>
             </div>
@@ -102,6 +102,34 @@
             <span class="modal-pontos">1250 pts</span>
         </div>
     </div>
-    
+    <div id="modal-tipo-cadastro">
+        <div class="modal-box-cadastro">
+            <button class="fechar-modal-cadastro" id="fechar-tipo-cadastro">X</button>
+            <h2 class="titulo-cadasstro">Junte-se ao UPLift</h2>
+            <p class="subtitulo-cadastro">Como você deseja participar da nossa comunidade?</p>
+
+            <div class="opcoes-cadastro">
+                <button id="btn-escolha-doador" class="btn-opcao">
+                    <span class="opcao-icone">👤</span>
+                    <div class="opcao-texto">
+                        <strong>Doador</strong>
+                        <span>Quero apoiar causas e acumular pontos</span>
+                    </div>
+                </button>
+
+                <button id="btn-escolha-empresa" class="btn-opcao">
+                    <span class="opcao-icone">🏢</span>
+                    <div class="opcao-texto">
+                        <strong>Empresa Parceira</strong>
+                        <span>Quero oferecer recompensas e apoiar</span>
+                    </div>
+                </button>
+            </div>    
+
+            <div class="link-login-rodape">
+                Já tem uma conta?<a href="#" id="link-abrir-login">Faça Login</a>
+            </div>            
+        </div>
+    </div>    
 </body>
 </html>

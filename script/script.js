@@ -29,3 +29,34 @@ modalPerfil.addEventListener('click', (evento) => {
         modalPerfil.classList.remove('ativo');
     }
 });
+
+const btnIniciarCadastro = document.getElementById('btn-iniciar-cadastro');
+const modalTipoCadastro = document.getElementById('modal-tipo-cadastro');
+const btnFecharTipoCadastro = document.getElementById('fechar-tipo-cadastro');
+
+if (btnIniciarCadastro) {
+    btnIniciarCadastro.addEventListener('click', () => {
+        modalTipoCadastro.classList.add('ativo');
+    });
+}
+
+btnFecharTipoCadastro.addEventListener('click', () => {
+    modalTipoCadastro.classList.remove('ativo');
+});
+
+modalTipoCadastro.addEventListener('click', (evento) => {
+    if (evento.target === modalTipoCadastro){
+        modalTipoCadastro.classList.remove('ativo');
+    }
+});
+
+const btnEscolhaDoador = document.getElementById('btn-escolha-doador');
+const btnEscolhaEmpresa = document.getElementById('btn-escolha-empresa');
+
+btnEscolhaDoador.addEventListener('click', () => {
+    modalTipoCadastro.classList.remove('ativo');
+});
+
+btnEscolhaEmpresa.addEventListener('click', () => {
+    modalTipoCadastro.classList.remove('ativo');
+})
