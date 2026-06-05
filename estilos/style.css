@@ -245,6 +245,141 @@ div#caminho-carrossel object {
     transition: all 0.3s ease;
 }
 
+main#conteudo-principal {
+    padding: 20px;
+}
+
+section#inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 0 50px 0;
+}
+
+div#inicio-conteudo h2{
+    font-size: 2.2rem;
+    color: #080505;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+div#inicio-conteudo p {
+    font-size: 1rem;
+    color: #666666;
+    margin: 0 0 32px 0;
+    line-height: 1.5;
+}
+
+div#botoes-inicio {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-primario {
+    background-color: #2e7d32;
+    width: fit-content;
+    margin: auto;
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primario:hover {
+    background-color: #25682a46;
+    color: #000000;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    width: fit-content;
+    margin: auto;
+    color: #333333;
+    border: 1px solid #cccccc;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-secundario:hover {
+    background-color: #f1f1f1;
+}
+
+section#impacto-preview {
+    margin-top: 10px;
+}
+
+.impacto-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 28px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); 
+    border: 1px solid #f9f9f9;
+    text-align: center;
+}
+
+.impacto-card h3 {
+    font-size: 1.2rem;
+    color: #333333;
+    margin: 0 0 28px 0;
+    font-weight: 700;
+}
+
+.grid-numeros {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.numero-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; 
+}
+
+.numero-destaque {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #2e7d32; 
+    letter-spacing: -0.5px;
+}
+
+.numero-texto {
+    font-size: 0.8rem;
+    color: #666666;
+    line-height: 1.3;
+}
+
+.link-saiba-mais {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #2e7d32;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    padding: 8px;
+}
+
+.link-saiba-mais:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+
 @keyframes scrollVertical {
     0% {
         transform: translateY(0);
@@ -253,4 +388,3 @@ div#caminho-carrossel object {
         transform: translateY(-50%);
     }
 }
-
