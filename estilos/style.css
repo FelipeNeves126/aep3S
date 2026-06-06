@@ -878,6 +878,136 @@ section#como-funciona-preview {
 .animacao-2 { animation: crossfadeAnim 12s infinite; animation-delay: 4s; }
 .animacao-3 { animation: crossfadeAnim 12s infinite; animation-delay: 8s; }
 
+.jornada-container {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* Linha vertical que conecta os passos */
+.jornada-container::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 24px;
+    width: 2px;
+    background-color: #e8f5e9;
+    z-index: 1;
+}
+
+.jornada-passo {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.jornada-icone {
+    width: 50px;
+    height: 50px;
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
+}
+
+.jornada-conteudo {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+    border: 1px solid #f9f9f9;
+    flex: 1;
+}
+
+.jornada-conteudo h3 {
+    font-size: 1.15rem;
+    color: #111111;
+    margin: 0 0 8px 0;
+}
+
+.jornada-conteudo p {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Área de Recompensas */
+.recompensas-destaque {
+    background: linear-gradient(145deg, #1b5e20, #2e7d32); /* Fundo verde gradiente */
+    border-radius: 16px;
+    padding: 32px 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.25);
+}
+
+.titulo-recompensas {
+    font-size: 1.4rem;
+    margin: 0 0 12px 0;
+    color: white;
+}
+
+.recompensas-destaque > p {
+    font-size: 0.95rem;
+    margin: 0 0 24px 0;
+    color: #e8f5e9;
+    line-height: 1.5;
+}
+
+.grid-recompensas {
+    display: flex;
+    flex-direction: column; /* Em celulares, fica um embaixo do outro */
+    gap: 16px;
+}
+
+.card-recompensa {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.recompensa-emoji {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.card-recompensa h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.card-recompensa p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #e8f5e9;
+    line-height: 1.4;
+}
+
+
+@media (min-width: 768px) {
+    .grid-recompensas {
+        flex-direction: row;
+    }
+    .card-recompensa {
+        flex: 1;
+    }
+}
+
 @keyframes scrollVertical {
     0% {
         transform: translateY(0);

@@ -139,3 +139,23 @@ if (linkMenuImpacto) {
     });
 }
 
+const linkMenuFuncionamento = document.getElementById('link-menu-funcionamento');
+const btnInicioFuncionamento = document.getElementById('btn-funcionamento');
+const btnVerMecanica = document.querySelector('.link-saiba-mais.btn-centralizado');
+
+function irParaFuncionamento(evento) {
+    evento.preventDefault();
+    window.location.href = 'funcionamento.html';
+}
+
+if (linkMenuFuncionamento) {
+    linkMenuFuncionamento.addEventListener('click', irParaFuncionamento);
+}
+
+if (btnInicioFuncionamento) {
+    btnInicioFuncionamento.addEventListener('click', irParaFuncionamento);
+}
+
+if (btnVerMecanica) {
+    btnVerMecanica.addEventListener('click', irParaFuncionamento);
+}
