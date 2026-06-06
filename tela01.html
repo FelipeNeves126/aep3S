@@ -16,13 +16,17 @@
                 <li><a href="#">INÍCIO</a></li>
                 <li><a href="#">IMPACTO</a></li>
                 <li><a href="#">FUNCIONAMENTO</a></li>
-                <li><a href="#">CADASTRO</a></li>
-                <li><a href="#">LOGIN</a></li>
+                <li><a href="#" id="link-menu-cadastro">CADASTRO</a></li>
+                <li><a href="#" id="link-menu-login">LOGIN</a></li>
             </ul>
         </nav>
 
         <div id="perfil-usuario">
-           <button id="btn-avatar">FN</button>
+           <button id="btn-avatar">
+                <svg viewBox="0 0 24 24" fill="#888888" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path>
+        </svg>
+           </button>
         </div>
     </header>
 
@@ -94,17 +98,17 @@
             <a href="#" class="link-saiba-mais btn-centralizado">Entender a mecânica completa ➔</a>
         </section>
     </main>
-    <div id="modal-perfil">
+    <div id="modal-perfil" class="js-modal-overlay">
         <div id="modal-box">
-            <button id="fechar-modal">X</button>
+            <button id="fechar-modal" class="fechar-modal-cadastro js-fechar-modal">X</button>
             <div class="modal-avatar">FN</div>
             <h2 class="modal-nome">Felipe Neves</h2>
             <span class="modal-pontos">1250 pts</span>
         </div>
     </div>
-    <div id="modal-tipo-cadastro">
+    <div id="modal-tipo-cadastro" class="js-modal-overlay">
         <div class="modal-box-cadastro">
-            <button class="fechar-modal-cadastro" id="fechar-tipo-cadastro">X</button>
+            <button class="fechar-modal-cadastro js-fechar-modal" id="fechar-tipo-cadastro">X</button>
             <h2 class="titulo-cadasstro">Junte-se ao UPLift</h2>
             <p class="subtitulo-cadastro">Como você deseja participar da nossa comunidade?</p>
 
@@ -130,6 +134,12 @@
                 Já tem uma conta?<a href="#" id="link-abrir-login">Faça Login</a>
             </div>            
         </div>
-    </div>    
+    </div>   
+    
+    <div id="modal-login">
+        <div class="modal-box-login">
+            <button></button>
+        </div>
+    </div>
 </body>
 </html>
