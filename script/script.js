@@ -31,10 +31,22 @@ if (btnIniciarCadastro) {
 const btnEscolhaDoador = document.getElementById('btn-escolha-doador');
 const btnEscolhaEmpresa = document.getElementById('btn-escolha-empresa');
 
+
 btnEscolhaDoador.addEventListener('click', () => {
     modalTipoCadastro.classList.remove('ativo');
 });
 
+if(btnEscolhaDoador) {
+    btnEscolhaDoador.addEventListener('click', () => {
+        window.location.href = 'cadastro-doador.html';
+    });
+}
+
+if(btnEscolhaEmpresa) {
+    btnEscolhaEmpresa.addEventListener('click', () => {
+        window.location.href = 'cadastro-empresa.html'
+    });
+}
 btnEscolhaEmpresa.addEventListener('click', () => {
     modalTipoCadastro.classList.remove('ativo');
 });
