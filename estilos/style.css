@@ -579,6 +579,114 @@ section#como-funciona-preview {
     text-decoration: none;
 }
 
+#modal-login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#modal-login.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-box-login {
+    background-color: #ffffff;
+    padding: 32px 24px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 350px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+#modal-login.ativo .modal-box-login {
+    transform: translateY(0);
+}
+
+.fechar-modal-login {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888888;
+}
+
+.titulo-login {
+    font-size: 1.4rem;
+    color: #111111;
+    margin: 0 0 8px 0;
+    text-align: center;
+}
+
+.subtitulo-login {
+    font-size: 0.95rem;
+    color: #666666;
+    margin: 0 0 24px 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.grupo-input label {
+    font-size: 0.9rem;
+    color: #333333;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.grupo-input input {
+    padding: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+    background-color: #fcfcfc;
+}
+
+.grupo-input input:focus {
+    border-color: #2e7d32;
+    background-color: #ffffff;
+}
+
+.opcoes-extras-login {
+    text-align: right;
+    margin-bottom: 24px;
+}
+
+.link-esqueci-senha {
+    font-size: 0.85rem;
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-full {
+    width: 100%;
+}
 
 @keyframes scrollVertical {
     0% {

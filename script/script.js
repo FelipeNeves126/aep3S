@@ -15,8 +15,8 @@ if (menuMobile.classList.contains('aberto')) {
 const btnAvatar = document.getElementById('btn-avatar');
 const modalPerfil = document.getElementById('modal-perfil');
 
-btnAvatar.addEventListener('click', () =>{
-    modalPerfil.classList.add('ativo');
+btnAvatar.addEventListener('click', () => {
+    document.getElementById('modal-login').classList.add('ativo');
 });
 
 const btnIniciarCadastro = document.getElementById('btn-iniciar-cadastro');
@@ -75,3 +75,37 @@ todosModais.forEach(modal => {
         }
     });
 });
+
+const modalLogin = document.getElementById('modal-login');
+
+const linkMenuLogin = document.getElementById('link-menu-login');
+if (linkMenuLogin) {
+    linkMenuLogin.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        
+        const menuMobile = document.getElementById('menu-mobile');
+        const btnMenu = document.getElementById('menu-btn');
+        menuMobile.classList.remove('aberto');
+        btnMenu.innerText = '☰';
+        
+        modalLogin.classList.add('ativo');
+    });
+}
+
+const linkAbrirLogin = document.getElementById('link-abrir-login');
+if (linkAbrirLogin) {
+    linkAbrirLogin.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        modalTipoCadastro.classList.remove('ativo'); 
+        modalLogin.classList.add('ativo'); 
+    });
+}
+
+const linkAbrirCadastroPeloLogin = document.getElementById('link-abrir-cadastro-pelo-login');
+if (linkAbrirCadastroPeloLogin) {
+    linkAbrirCadastroPeloLogin.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        modalLogin.classList.remove('ativo'); // Esconde o login
+        modalTipoCadastro.classList.add('ativo'); // Mostra as opções de cadastro
+    });
+}    

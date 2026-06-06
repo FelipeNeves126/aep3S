@@ -136,9 +136,32 @@
         </div>
     </div>   
     
-    <div id="modal-login">
+    <div id="modal-login" class="js-modal-overlay">
         <div class="modal-box-login">
-            <button></button>
+            <button class="fechar-modal-login js-fechar-modal">X</button>
+            <h2 class="titulo-login">Bem vindo de volta!</h2>
+            <p class="subtitulo-login">Acesse sua conta para continuar impactando o mundo</p>
+
+            <form id="form-login">
+                <div class="grupo-input">
+                    <label for="login-email">E-mail</label>
+                    <input type="email" id="login-email" placeholder="seu@email.com" required>
+                </div>
+                <div class="grupo-input">
+                    <label for="login-senha">Senha</label>
+                    <input type="password" id="login-senha" placeholder="*************" required>
+                </div>
+
+                <div class="opcoes-extras-login">
+                    <a href="#" class="link-esqueci-senha">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="btn-primario btn-full">Entrar</button>
+            </form>
+
+            <div class="link-login-rodape">
+                Não tem uma conta? <a href="#" id="link-abrir-cadastro-pelo-login">Cadastre-se</a>
+            </div>
         </div>
     </div>
 </body>
