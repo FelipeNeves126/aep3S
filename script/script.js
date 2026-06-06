@@ -117,7 +117,25 @@ const linkAbrirCadastroPeloLogin = document.getElementById('link-abrir-cadastro-
 if (linkAbrirCadastroPeloLogin) {
     linkAbrirCadastroPeloLogin.addEventListener('click', (evento) => {
         evento.preventDefault();
-        modalLogin.classList.remove('ativo'); // Esconde o login
-        modalTipoCadastro.classList.add('ativo'); // Mostra as opções de cadastro
+        modalLogin.classList.remove('ativo'); 
+        modalTipoCadastro.classList.add('ativo'); 
     });
 }    
+
+const btnVerRelatorio = document.getElementById('btn-ver-relatorio');
+const linkMenuImpacto = document.getElementById('link-menu-impacto');
+
+if (btnVerRelatorio) {
+    btnVerRelatorio.addEventListener('click', (evento) => {
+        evento.preventDefault(); 
+        window.location.href = 'relatorio-impacto.html';
+    });
+}
+
+if (linkMenuImpacto) {
+    linkMenuImpacto.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        window.location.href = 'relatorio-impacto.html';
+    });
+}
+
