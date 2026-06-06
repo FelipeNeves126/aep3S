@@ -998,6 +998,118 @@ section#como-funciona-preview {
     line-height: 1.4;
 }
 
+.btn-sair {
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid #ff5252;
+    color: #ff5252;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-sair:hover {
+    background-color: #ffebee;
+}
+
+.avatar-grande {
+    width: 64px;
+    height: 64px;
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0 auto 16px auto;
+}
+
+.lista-historico {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.item-historico {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border: 1px solid #f9f9f9;
+}
+
+.data-historico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f7f4;
+    color: #2e7d32;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+.data-historico .dia {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.data-historico .mes {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.conteudo-historico {
+    flex: 1;
+}
+
+.conteudo-historico h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.local-historico {
+    margin: 0 0 8px 0;
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+.tags-historico {
+    display: flex;
+    gap: 8px;
+}
+
+.tag-vidas, .tag-pontos {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.tag-vidas {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.tag-pontos {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
 
 @media (min-width: 768px) {
     .grid-recompensas {

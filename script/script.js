@@ -26,16 +26,37 @@ document.addEventListener('click', (evento) => {
 const btnAvatar = document.getElementById('btn-avatar');
 const modalPerfil = document.getElementById('modal-perfil');
 
-btnAvatar.addEventListener('click', () => {
-    document.getElementById('modal-login').classList.add('ativo');
-});
-
 const btnIniciarCadastro = document.getElementById('btn-iniciar-cadastro');
 const modalTipoCadastro = document.getElementById('modal-tipo-cadastro');
 
 if (btnIniciarCadastro) {
     btnIniciarCadastro.addEventListener('click', () => {
         modalTipoCadastro.classList.add('ativo');
+    });
+}
+
+const btnDeslogar = document.getElementById('btn-deslogar');
+
+if (btnDeslogar) {
+    btnDeslogar.addEventListener('click', () => {
+        usuarioLogado = false;
+
+        document.getElementById('modal-perfil').classList.remove('ativo');
+
+        const btnAvatar = document.getElementById('btn-avatar');
+        btnAvatar.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="#888888" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path>
+            </svg>
+        `;
+
+        document.getElementById('btn-iniciar-cadastro').innerText = 'Quero fazer parte';
+        document.getElementById('btn-funcionamento').innerText = 'Como Funciona';
+
+        document.getElementById('bloco-visitante').style.display = 'block';
+        document.getElementById('bloco-usuario-logado').style.display = 'none';
+
+        alert('Você saiu da sua conta.');
     });
 }
 
@@ -170,3 +191,75 @@ if (btnInicioFuncionamento) {
 if (btnVerMecanica) {
     btnVerMecanica.addEventListener('click', irParaFuncionamento);
 }
+
+let usuarioLogado = false;
+
+if (btnAvatar) {
+    btnAvatar.addEventListener('click', () => {
+        if (usuarioLogado) {
+            document.getElementById('modal-perfil').classList.add('ativo');
+        } else {
+            document.getElementById('modal-login').classList.add('ativo');
+        }
+    });
+}
+
+const formLogin = document.getElementById('form-login');
+
+if (formLogin) {
+    formLogin.addEventListener('submit', (evento) => {
+        evento.preventDefault(); 
+
+        const emailDigitado = document.getElementById('login-email').value;
+        const senhaDigitada = document.getElementById('login-senha').value;
+
+        if (emailDigitado === 'seu@email.com' && senhaDigitada === '123senha') {
+            
+            usuarioLogado = true;
+
+            document.getElementById('modal-login').classList.remove('ativo');
+
+            btnAvatar.innerHTML = `
+                <div style="background-color: #2e7d32; color: white; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.95rem;">
+                    FN
+                </div>
+            `;
+
+            document.getElementById('btn-iniciar-cadastro').innerText = 'Fazer doação';
+            document.getElementById('btn-funcionamento').innerText = 'Relatório Pessoal';
+
+            document.getElementById('bloco-visitante').style.display = 'none';
+            document.getElementById('bloco-usuario-logado').style.display = 'block';
+
+            formLogin.reset();
+            alert('Acesso liberado! Bem-vindo de volta.');
+            
+        } else {
+            alert('E-mail ou senha incorretos. Dica: use seu@email.com e 123senha');
+        }
+    });
+}
+
+const btnHeroSecundario = document.getElementById('btn-funcionamento');
+const btnRelatorioBaixo = document.querySelector('#bloco-usuario-logado .link-saiba-mais');
+
+if (btnHeroSecundario) {
+    btnHeroSecundario.removeEventListener('click', irParaFuncionamento); 
+    
+    btnHeroSecundario.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        if (usuarioLogado) {
+            window.location.href = 'relatorio-pessoal.html';
+        } else {
+            window.location.href = 'funcionamento.html';
+        }
+    });
+}
+
+if (btnRelatorioBaixo) {
+    btnRelatorioBaixo.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        window.location.href = 'relatorio-pessoal.html';
+    });
+}
+
