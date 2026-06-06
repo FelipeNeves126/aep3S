@@ -12,6 +12,17 @@ if (menuMobile.classList.contains('aberto')) {
 }
 });
 
+document.addEventListener('click', (evento) => {
+    const menuMobile = document.getElementById('menu-mobile');
+    const btnMenu = document.getElementById('menu-btn');
+    if (menuMobile && btnMenu && menuMobile.classList.contains('aberto')) {   
+        if (!menuMobile.contains(evento.target) && !btnMenu.contains(evento.target)) {
+            menuMobile.classList.remove('aberto');
+            btnMenu.innerText = '☰';
+        }
+    }
+});
+
 const btnAvatar = document.getElementById('btn-avatar');
 const modalPerfil = document.getElementById('modal-perfil');
 
