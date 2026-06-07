@@ -64,6 +64,36 @@
             </div>
         </section>
 
+        <section id="loja-preview" style="display: none;">
+            <div class="impacto-card">
+                <h3>UPLift Store</h3>
+                <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px;">Use seus UPLift Points para resgatar passagens, cupons de apps de entrega, descontos em faculdades e streamings.</p>
+                
+                <button id="btn-acessar-loja" class="btn-secundario btn-full" style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+                    <span style="font-size: 1.2rem;">🛍️</span> Entrar na Loja
+                </button>
+
+                <div class="container-patrocinadores">
+                    <span class="titulo-patrocinadores">Marcas que apoiam essa ideia:</span>
+                    <div class="carrossel-patrocinadores">
+                        <div class="trilha-patrocinadores">
+                            <div class="patrocinador-item">✈️ VoeMais Air</div>
+                            <div class="patrocinador-item">🎬 CineStream</div>
+                            <div class="patrocinador-item">🍔 FoodFast</div>
+                            <div class="patrocinador-item">🎓 UniEnsino</div>
+                            <div class="patrocinador-item">🛍️ MegaShop</div>
+                            
+                            <div class="patrocinador-item">✈️ VoeMais Air</div>
+                            <div class="patrocinador-item">🎬 CineStream</div>
+                            <div class="patrocinador-item">🍔 FoodFast</div>
+                            <div class="patrocinador-item">🎓 UniEnsino</div>
+                            <div class="patrocinador-item">🛍️ MegaShop</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="como-funciona-preview">
             
             <div id="bloco-visitante">
@@ -188,6 +218,56 @@
 
             <div class="link-login-rodape">
                 Não tem uma conta? <a href="#" id="link-abrir-cadastro-pelo-login">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-doacao" class="js-modal-overlay">
+        <div class="modal-box-cadastro">
+            <button class="fechar-modal-cadastro js-fechar-modal">✕</button>
+            <h2 class="titulo-cadastro">Faça sua Doação</h2>
+            <p class="subtitulo-cadastro">Escolha a causa e o valor para transformar vidas.</p>
+
+            <form id="form-doacao">
+                <div class="grupo-input">
+                    <label for="doacao-causa">Causa / Instituição</label>
+                    <select id="doacao-causa" required>
+                        <option value="" disabled selected>Selecione um projeto...</option>
+                        <option value="agua">Água Limpa Para Todos (Angola)</option>
+                        <option value="educacao">Educação Sem Fronteiras (Brasil)</option>
+                        <option value="refugio">Refúgio e Esperança (Síria)</option>
+                        <option value="saude">Saúde e Nutrição Infantil (Haiti)</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="doacao-valor">Valor da doação (R$)</label>
+                    <input type="number" id="doacao-valor" placeholder="Ex: 50" min="5" step="1" required>
+                </div>
+
+                <div class="preview-pontos">
+                    <span>Pontos gerados:</span>
+                    <strong id="pontos-calculados">0 pts</strong>
+                </div>
+
+                <button type="submit" class="btn-primario btn-full" style="margin-top: 8px;">Confirmar Doação</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-loja-manutencao" class="js-modal-overlay">
+        <div class="modal-box-cadastro" style="padding-top: 0; overflow: hidden;"> <div class="faixa-manutencao">
+                🚧 EM CONSTRUÇÃO 🚧
+            </div>
+            
+            <button class="fechar-modal-cadastro js-fechar-modal" style="top: 48px;">✕</button>
+            
+            <div style="padding: 24px 0 0 0; text-align: center;">
+                <h2 class="titulo-cadastro" style="margin-bottom: 12px;">Loja em Breve!</h2>
+                <p class="subtitulo-cadastro" style="line-height: 1.5;">Seção ainda em construção.</p>
+                <p class="subtitulo-cadastro" style="line-height: 1.5; color: #111;">Continue acumulando seus <strong>pontos vitalícios</strong>. Avisaremos você assim que novos itens e resgates maravilhosos forem disponibilizados na loja!</p>
+                
+                <button class="btn-primario js-fechar-modal" style="margin-top: 24px; width: 100%;">Entendi, vou juntar pontos</button>
             </div>
         </div>
     </div>

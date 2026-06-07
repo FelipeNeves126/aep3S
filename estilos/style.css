@@ -18,6 +18,9 @@ header#main-header {
     position: sticky;
     top: 0;
     z-index: 100;
+
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 
@@ -108,6 +111,38 @@ button#btn-avatar {
 button#btn-avatar:hover {
     background-color: #e0e0e0;
 }
+
+#modal-doacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#modal-doacao.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modal-doacao .modal-box-cadastro {
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+#modal-doacao.ativo .modal-box-cadastro {
+    transform: translateY(0);
+}
+
 #modal-perfil{
     position: fixed;
     top: 0;
@@ -247,6 +282,11 @@ div#caminho-carrossel object {
 
 main#conteudo-principal {
     padding: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 section#inicio {
@@ -1110,6 +1150,140 @@ section#como-funciona-preview {
     color: #2e7d32;
 }
 
+#doacao-causa {
+    padding: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fcfcfc;
+    color: #333333;
+    font-family: inherit;
+    cursor: pointer;
+    appearance: none; 
+    
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+#doacao-causa:focus {
+    border-color: #2e7d32;
+    background-color: #ffffff;
+}
+
+.preview-pontos {
+    background-color: #e8f5e9;
+    border: 1px dashed #2e7d32;
+    padding: 14px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.preview-pontos span {
+    font-size: 0.95rem;
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.preview-pontos strong {
+    font-size: 1.4rem;
+    color: #1b5e20;
+}
+
+.container-patrocinadores {
+    margin-top: 32px;
+    border-top: 1px solid #f1f1f1;
+    padding-top: 16px;
+}
+
+.titulo-patrocinadores {
+    display: block;
+    font-size: 0.8rem;
+    color: #888888;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.carrossel-patrocinadores {
+    width: 100%;
+    overflow: hidden; /* Esconde o que vaza da caixa */
+    position: relative;
+    white-space: nowrap;
+}
+
+.trilha-patrocinadores {
+    display: inline-flex;
+    gap: 24px;
+    /* A animação faz a trilha deslizar para a esquerda infinitamente */
+    animation: rolagemInfinita 15s linear infinite; 
+}
+
+.patrocinador-item {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #444444;
+    background-color: #f9f9f9;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #eeeeee;
+}
+
+@keyframes rolagemInfinita {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+
+.faixa-manutencao {
+    background-color: #ffcc00;
+    color: #000000;
+    font-weight: 900;
+    text-align: center;
+    padding: 12px;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(0,0,0,0.1) 10px,
+        rgba(0,0,0,0.1) 20px
+    );
+}
+
+#modal-loja-manutencao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#modal-loja-manutencao.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modal-loja-manutencao.ativo .modal-box-cadastro {
+    transform: translateY(0);
+}
 
 @media (min-width: 768px) {
     .grid-recompensas {

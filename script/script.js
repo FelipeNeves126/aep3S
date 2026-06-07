@@ -24,14 +24,18 @@ document.addEventListener('click', (evento) => {
 });
 
 const btnAvatar = document.getElementById('btn-avatar');
-const modalPerfil = document.getElementById('modal-perfil');
 
 const btnIniciarCadastro = document.getElementById('btn-iniciar-cadastro');
 const modalTipoCadastro = document.getElementById('modal-tipo-cadastro');
 
 if (btnIniciarCadastro) {
-    btnIniciarCadastro.addEventListener('click', () => {
-        modalTipoCadastro.classList.add('ativo');
+    btnIniciarCadastro.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        if (usuarioLogado) {
+            document.getElementById('modal-doacao').classList.add('ativo');
+        } else {
+            document.getElementById('modal-tipo-cadastro').classList.add('ativo');
+        }
     });
 }
 
@@ -55,8 +59,19 @@ if (btnDeslogar) {
 
         document.getElementById('bloco-visitante').style.display = 'block';
         document.getElementById('bloco-usuario-logado').style.display = 'none';
+        document.getElementById('loja-preview').style.display = 'none';
 
         alert('Você saiu da sua conta.');
+    });
+}
+
+const btnAcessarLoja = document.getElementById('btn-acessar-loja');
+const modalLojaManutencao = document.getElementById('modal-loja-manutencao');
+
+if (btnAcessarLoja) {
+    btnAcessarLoja.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        modalLojaManutencao.classList.add('ativo');
     });
 }
 
@@ -230,6 +245,7 @@ if (formLogin) {
 
             document.getElementById('bloco-visitante').style.display = 'none';
             document.getElementById('bloco-usuario-logado').style.display = 'block';
+            document.getElementById('loja-preview').style.display = 'block';
 
             formLogin.reset();
             alert('Acesso liberado! Bem-vindo de volta.');
@@ -262,4 +278,35 @@ if (btnRelatorioBaixo) {
         window.location.href = 'relatorio-pessoal.html';
     });
 }
+
+const inputValor = document.getElementById('doacao-valor');
+const displayPontos = document.getElementById('pontos-calculados');
+const formDoacao = document.getElementById('form-doacao');
+const modalDoacao = document.getElementById('modal-doacao');
+
+if (inputValor) {
+    inputValor.addEventListener('input', () => {
+        const valorReal = parseFloat(inputValor.value);
+        
+        if (!isNaN(valorReal) && valorReal > 0) {
+            const pontos = Math.floor(valorReal * 10);
+            displayPontos.innerText = pontos.toLocaleString('pt-BR') + ' pts';
+        } else {
+            displayPontos.innerText = '0 pts';
+        }
+    });
+}
+
+if (formDoacao) {
+    formDoacao.addEventListener('submit', (evento) => {
+        evento.preventDefault();
+        
+        alert('🎉 Doação confirmada! Muito obrigado por ajudar. Os pontos já foram adicionados ao seu perfil.');
+        
+        formDoacao.reset();
+        displayPontos.innerText = '0 pts';
+        modalDoacao.classList.remove('ativo');
+    });
+}
+
 
